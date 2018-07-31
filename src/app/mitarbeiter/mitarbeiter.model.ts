@@ -1,4 +1,5 @@
 export class Mitarbeiter {
+  public imagePath: string;
   public firstName: string;
   public lastName: string;
   public position: string;
@@ -8,7 +9,17 @@ export class Mitarbeiter {
   public aboutMember: string;
   public projects: string;
 
-  constructor(firstName: string, lastName: string, position: string,  department: string, email: string, phone: string,  aboutMember: string, projects: string) {
+  constructor(imagePath: string,
+              firstName: string,
+              lastName: string,
+              position: string,
+              department: string,
+              email: string,
+              phone: string,
+              aboutMember: string,
+              projects: string
+  ) {
+    this.imagePath = imagePath;
     this.firstName = firstName;
     this.lastName = lastName;
     this.position = position;
