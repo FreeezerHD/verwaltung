@@ -1,16 +1,12 @@
-<div class="row">
-  <div class="col-md-6">
-    <div class="card-deck">
-      <div class="card" (click)="onSelected()">
-        <div class="card-body">
-          <h5 class="card-title mb-1">{{ user.firstName}} {{ user.lastName}}</h5>
-          <h5 class="mb-1">{{ user.position }}</h5>
-          <h6 class="mb-1">{{ user.department }}</h6>
-          <p class="mb-1"><a href="#">{{ user.email }}</a></p>
-          <small class="text-muted">{{ user.phone }}</small>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<!--<div class="card" (click)="onSelected()">-->
+  <!--<div class="card-body">-->
+    <!--<h5 class="card-title mb-1">{{ user.firstName}} {{ user.lastName}}</h5>-->
+    <!--<h5 class="mb-1">{{ user.position }}</h5>-->
+    <!--<h6 class="mb-1">{{ user.department }}</h6>-->
+    <!--<p class="mb-1"><a href="#">{{ user.email }}</a></p>-->
+    <!--<small class="text-muted">{{ user.phone }}</small>-->
+  <!--</div>-->
+<!--</div>-->
+<ul class="list-group" >
+  <li class="list-group-item" (click)="onSelected()">{{ user.firstName}} {{ user.lastName}}</li>
+</ul>

@@ -22,7 +22,8 @@
       <app-mitarbeiter-liste (membersWasSelected)="selectedMember = $event"></app-mitarbeiter-liste>
     </div>
     <div class="col-md-6">
-      <h4>Mitarbeiter Details</h4>
+      <h4>Mitarbeiter Details<button class="btn btn-success pull-right">Bearbeiten</button></h4>
+
       <hr>
       <app-mitarbeiter-details *ngIf="selectedMember; else infoText" [user]="selectedMember"></app-mitarbeiter-details>
       <ng-template #infoText>

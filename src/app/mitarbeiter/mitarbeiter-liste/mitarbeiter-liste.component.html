@@ -1,2 +1,6 @@
-<app-mitarbeiter-items *ngFor="let userElement of members" [user]="userElement" (memberSelected)="onMemberSelected(userElement)"></app-mitarbeiter-items>
+
+  <app-mitarbeiter-items *ngFor="let userElement of members" [user]="userElement"
+                         (memberSelected)="onMemberSelected(userElement)"></app-mitarbeiter-items>
+
+
 <app-mitarbeiter-anlegen (AddNewMember)="addNewMember($event)"></app-mitarbeiter-anlegen>
