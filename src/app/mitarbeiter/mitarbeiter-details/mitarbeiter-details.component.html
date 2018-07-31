@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-md-12">
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-2">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="fa fa-user"></i></a>
+      <a class="list-group-item list-group-item-action" id="list-urlaub-list" data-toggle="list" href="#list-urlaub" role="tab" aria-controls="urlaub"><i class="fa fa-plane"></i></a>
+      <a class="list-group-item list-group-item-action" id="list-projects-list" data-toggle="list" href="#list-projects" role="tab" aria-controls="projects"><i class="fa fa-digg"></i></a>
+    </div>
+  </div>
+  <div class="col-10">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+        <ul>
+          <li>{{ user.firstName }} {{ user.lastName }}</li>
+          <li></li>
+          <li>{{ user.position }}</li>
+          <li>{{ user.department }}</li>
+          <li><a href="#">{{ user.email }}</a></li>
+          <li>{{ user.phone }}</li>
+          <li>{{ user.aboutMember }}</li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="list-urlaub" role="tabpanel" aria-labelledby="list-urlaub-list">
+        <div id="calendar">
+          <app-urlaubsplanung></app-urlaubsplanung>
+        </div>
+      </div>
+     <div class="tab-pane fade" id="list-projects" role="tabpanel" aria-labelledby="list-projects-list">
+        <div id="projects">
+          <ul>
+            <li><h3>Projekte</h3></li>
+            <li>{{ user.projects }}</li>
+          </ul>
+        </div>
+       <hr>
+       <div class="add-new-projects">
+         <h5><i class="fa fa-plus-square" data-toggle="modal" data-target="#exampleModalCenter" (click)="addNewProjects()"></i></h5>
+         <!-- Button trigger modal -->
+         <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">-->
+           <!--Launch demo modal-->
+         <!--</button>-->
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalCenterTitle">Neues Projekt anlegen</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body">
+                 <div class="alert alert-warning" role="alert">
+                   Comming Soon!!! <br>
+                   Hier soll der Mitarbeiter seine neuen Projekte anlegen können.
+                 </div>
+                 <!--<div class="form-row">-->
+                   <!--<div class="form-group col-md-12">-->
+                     <!--<label for="inputAboutMember">Projekte</label>-->
+                     <!--<input type="text" class="form-control" id="inputAboutMember" placeholder="">-->
+                   <!--</div>-->
+                 <!--</div>-->
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
+                 <!--todo: Speichern Button: hier muss man noch das disabled entfernen!!!-->
+                 <!--todo: Speichern Button: noch die hinzufügen function erstellen!!!-->
+                 <button type="button" class="btn btn-primary" (click)="addNewProjects()" disabled>Speichern</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
