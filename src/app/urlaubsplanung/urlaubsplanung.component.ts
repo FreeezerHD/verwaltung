@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import flatpickr from "flatpickr";
-import {element} from "protractor";
+import flatpickr from 'flatpickr';
 
 @Component({
   selector: 'app-urlaubsplanung',
@@ -14,8 +13,8 @@ export class UrlaubsplanungComponent implements OnInit {
   ngOnInit() {
     flatpickr('#calendar', {
       wrap: true,
-      dateFormat: "d-m-Y",
-      mode: "range",
+      dateFormat: 'd-m-Y',
+      mode: 'range',
       weekNumbers: true,
     });
   }

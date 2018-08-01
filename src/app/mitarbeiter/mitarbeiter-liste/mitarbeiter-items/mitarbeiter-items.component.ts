@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Mitarbeiter} from "../../mitarbeiter.model";
+import {Mitarbeiter} from '../../mitarbeiter.model';
 
 @Component({
   selector: 'app-mitarbeiter-items',
@@ -10,14 +10,18 @@ export class MitarbeiterItemsComponent implements OnInit {
   @Input() user: Mitarbeiter;
   @Output() memberSelected = new EventEmitter<void>();
 
-  constructor() { }
+  isActive = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   onSelected() {
     this.memberSelected.emit();
-
+    this.isActive = !this.isActive;
   }
+
 
 }
