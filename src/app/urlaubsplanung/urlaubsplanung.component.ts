@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import flatpickr from 'flatpickr';
 
 @Component({
@@ -8,7 +8,10 @@ import flatpickr from 'flatpickr';
 })
 export class UrlaubsplanungComponent implements OnInit {
 
-  constructor() { }
+  membersHolidays = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
     flatpickr('#calendar', {
@@ -19,5 +22,10 @@ export class UrlaubsplanungComponent implements OnInit {
     });
   }
 
+  // formGroupExampleInput
+  getHolidays() {
+    const holidays = (<any>(document.querySelector('#formGroupExampleInput'))).value;
+    this.membersHolidays.push(holidays);
+  }
 }
 

@@ -19,7 +19,17 @@
         </div>
       </div>
     </form>
-
+  </div>
+  <div class="col-md-6">
+    <button class="btn btn-success pull-right set-holidays" (click)="getHolidays()">Urlaub eintragen</button>
   </div>
 </div>
 <hr>
+
+<div class="row">
+  <div class="col-md-12" *ngFor="let freedays of membersHolidays">
+    <ul class="list-group">
+      <li class="list-group-item holiday-list">{{ freedays }}</li>
+    </ul>
+  </div>
+</div>
