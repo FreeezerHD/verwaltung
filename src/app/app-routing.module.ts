@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from "./login/login.component";
-import { MitarbeiterComponent } from "./mitarbeiter/mitarbeiter.component";
-import { MitarbeiterAnlegenComponent } from "./mitarbeiter/mitarbeiter-anlegen/mitarbeiter-anlegen.component";
-import { UrlaubsplanungComponent} from "./urlaubsplanung/urlaubsplanung.component";
-import { MitarbeiterDetailsComponent } from "./mitarbeiter/mitarbeiter-details/mitarbeiter-details.component";
+import { LoginComponent } from './login/login.component';
+import { MitarbeiterComponent } from './mitarbeiter/mitarbeiter.component';
+import { MitarbeiterAnlegenComponent } from './mitarbeiter/mitarbeiter-anlegen/mitarbeiter-anlegen.component';
+import { UrlaubsplanungComponent} from './urlaubsplanung/urlaubsplanung.component';
+import { MitarbeiterDetailsComponent } from './mitarbeiter/mitarbeiter-details/mitarbeiter-details.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'mitarbeiter-anlegen', component: MitarbeiterAnlegenComponent },
   { path: 'urlaubsplanung', component: UrlaubsplanungComponent },
   { path: 'mitarbeiter-details', component: MitarbeiterDetailsComponent  },
+  { path: 'page-not-found', component: PageNotFoundComponent  },
+  { path: '**', redirectTo: 'page-not-found'  }
 
 ];
 

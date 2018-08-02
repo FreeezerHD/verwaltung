@@ -14,6 +14,7 @@ import { MitarbeiterAnlegenComponent } from './mitarbeiter/mitarbeiter-anlegen/m
 import { UrlaubsplanungComponent } from './urlaubsplanung/urlaubsplanung.component';
 import { MitarbeiterDetailsComponent } from './mitarbeiter/mitarbeiter-details/mitarbeiter-details.component';
 import {Ng2FlatpickrModule} from "ng2-flatpickr";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {Ng2FlatpickrModule} from "ng2-flatpickr";
     MitarbeiterItemsComponent,
     MitarbeiterAnlegenComponent,
     UrlaubsplanungComponent,
-    MitarbeiterDetailsComponent
+    MitarbeiterDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     Ng2FlatpickrModule,
