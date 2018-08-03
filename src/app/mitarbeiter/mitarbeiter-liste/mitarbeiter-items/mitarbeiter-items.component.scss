@@ -1,10 +1,15 @@
-.list-group {
-  margin-top: 10px;
-}
-.active {
-  background-color: dodgerblue;
+#memberList {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .list-group-item {
+    margin-top: 10px;
+  }
+
+  .member-image {
+    height: 50px;
+    width: 50px;
+  }
 }
 
-.disabled {
-  background-color: transparent;
-}

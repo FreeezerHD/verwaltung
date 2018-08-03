@@ -25,13 +25,14 @@
       <h4>Mitarbeiter Details<button class="btn btn-success pull-right">Bearbeiten</button></h4>
 
       <hr>
-      <app-mitarbeiter-details *ngIf="selectedMember; else infoText" [user]="selectedMember"></app-mitarbeiter-details>
-      <ng-template #infoText>
-        <div class="alert alert-danger" role="alert">
-          <i class="fa fa-info-circle"></i>
-          Um Mitarbeiter Details zu sehen wähle bitte einen Mitarbeiter aus.
-        </div>
-      </ng-template>
+      <router-outlet></router-outlet>
+      <!--<app-mitarbeiter-details *ngIf="selectedMember; else infoText" [user]="selectedMember"></app-mitarbeiter-details>-->
+      <!--<ng-template #infoText>-->
+        <!--<div class="alert alert-danger" role="alert">-->
+          <!--<i class="fa fa-info-circle"></i>-->
+          <!--Um Mitarbeiter Details zu sehen wähle bitte einen Mitarbeiter aus.-->
+        <!--</div>-->
+      <!--</ng-template>-->
     </div>
   </div>
 

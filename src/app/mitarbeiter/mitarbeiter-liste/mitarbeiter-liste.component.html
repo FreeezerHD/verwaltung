@@ -1,11 +1,11 @@
 
   <app-mitarbeiter-items
     class="list-cursor"
-    *ngFor="let userElement of members"
+    *ngFor="let userElement of members; let i = index"
     [user]="userElement"
+    [index]="i"
     (memberSelected)="onMemberSelected(userElement)"
   >
-
   </app-mitarbeiter-items>
 
 

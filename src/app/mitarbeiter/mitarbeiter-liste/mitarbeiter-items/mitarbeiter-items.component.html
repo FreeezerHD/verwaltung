@@ -1,5 +1,21 @@
-<ul class="list-group">
-  <li class="list-group-item" [ngClass]="{'active': isActive }"  (click)="onSelected()">
-    {{ user.firstName}} {{ user.lastName}}
-  </li>
-</ul>
+<div id="memberList">
+  <a class="list-group-item clearfix" [routerLink]="[index]" routerLinkActive="active">
+    <div class="row">
+      <div class="col-md-10">
+        <ul>
+          <li>
+            <h5 class="mb-1">{{ user.firstName}} {{ user.lastName}}</h5>
+          </li>
+          <li>
+            <small>{{user.position}}</small>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <img class="img-fluid member-image pull-right" [src]="user.imagePath" alt="{{user.firstName}}">
+      </div>
+    </div>
+  </a>
+</div>
+
+

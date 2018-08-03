@@ -9,19 +9,11 @@ import {Mitarbeiter} from '../../mitarbeiter.model';
 export class MitarbeiterItemsComponent implements OnInit {
   @Input() user: Mitarbeiter;
   @Output() memberSelected = new EventEmitter<void>();
-
-  isActive = false;
+  @Input() index: number;
 
   constructor() {
   }
 
   ngOnInit() {
   }
-
-  onSelected() {
-    this.memberSelected.emit();
-    this.isActive = !this.isActive;
-  }
-
-
 }

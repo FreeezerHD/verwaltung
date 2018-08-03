@@ -1,7 +1,12 @@
 h1 {
-  color: dodgerblue;
+  color: #2892D7;
 }
 
 .navbar {
-  background-color: dodgerblue;
+  background-color: #2892D7;
+}
+
+.active {
+  border-bottom: 0.2rem solid #1B4353;
+  border-radius: 0.2rem;
 }
